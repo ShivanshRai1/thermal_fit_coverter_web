@@ -1,0 +1,4 @@
+flask==3.1.2
+numpy==2.4.2
+thermal-network
+gunicorn==23.0.0
