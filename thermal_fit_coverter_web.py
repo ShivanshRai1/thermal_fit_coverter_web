@@ -430,6 +430,12 @@ def create_app() -> "Flask":
             tp = _parse_array("tp", payload.get("tp"))
             zth = _parse_array("zth", payload.get("zth"))
 
+            # Debug print statements for backend logs
+            print("Received tp:", tp)
+            print("Received zth:", zth)
+            print("Length of tp:", len(tp) if tp is not None else 0)
+            print("Length of zth:", len(zth) if zth is not None else 0)
+
             n_layers = payload.get("n_layers")
             max_layers = int(payload.get("max_layers", 10))
             selection_criterion = str(payload.get("selection_criterion", "bic"))
